@@ -25,7 +25,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -37,9 +36,33 @@ h1 {
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+}
+
+.page > header {
+  grid-area: header;
+}
+.page > .left {
+  grid-area: left;
+}
+.page > main {
+  grid-area: main;
+}
+.page > .right {
+  grid-area: right;
+}
+.page > footer {
+  grid-area: footer;
 }
 
 .logo {

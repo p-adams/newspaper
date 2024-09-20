@@ -2,13 +2,11 @@ import "./style.css";
 import { setupCounter } from "./counter.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div>
+  <div class="page">
     <header>header</header>
-    <div>
-    <aside>left</aside>
+    <aside class="left">left</aside>
     <main>main</main>
-    <aside>right</aside>
-    </div>
+    <aside class="right">right</aside>
     <footer>footer</footer>
   </div>
 `;
