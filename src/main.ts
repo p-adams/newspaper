@@ -1,14 +1,20 @@
 import "./style.css";
-import { setupCounter } from "./counter.ts";
+
+import setupAdBanner from "./banner.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div class="page">
     <header>header</header>
-    <aside class="left">left</aside>
+    <nav class="left">
+    <ul></ul>
+    
+    </nav>
     <main>main</main>
-    <aside class="right">right</aside>
+    <aside class="right">
+      <div id="ad-banner"/>
+    </aside>
     <footer>footer</footer>
   </div>
 `;
 
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+setupAdBanner(document.querySelector<HTMLDivElement>("#ad-banner")!);

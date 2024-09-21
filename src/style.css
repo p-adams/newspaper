@@ -11,6 +11,9 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --header-height: 80px;
+  --footer-height: 55px;
 }
 
 a {
@@ -42,11 +45,12 @@ h1 {
   width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 300px 1fr 300px;
+  grid-template-columns: 300px 1fr 200px;
   grid-template-areas:
     "header header header"
     "left main right"
     "footer footer footer";
+  grid-template-rows: var(--header-height) 1fr var(--footer-height);
 }
 
 .page > header {
@@ -63,6 +67,10 @@ h1 {
 }
 .page > footer {
   grid-area: footer;
+}
+
+#ad-banner {
+  height: 100%;
 }
 
 .logo {
